@@ -7,7 +7,10 @@ const prisma = new PrismaClient();
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     const posts = await prisma.post.findMany({
-      take: 12
+      take: 12,
+      orderBy: {
+        createdAt: "desc",
+      },
     })
 
     return res.status(200).json(posts);
