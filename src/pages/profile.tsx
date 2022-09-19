@@ -30,7 +30,7 @@ const ProfilePage: NextPage = () => {
   const [user, setUser] = useState<UserWithPosts>(null);
 
   const getUser = async () => {
-    const { data } = await axios.get(`${process.env.NEXTAUTH_URL}/api/user`);
+    const { data } = await axios.get(`${process.env.API_URL}/api/user`);
 
     setUser(data);
   };

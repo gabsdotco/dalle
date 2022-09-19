@@ -26,7 +26,7 @@ const ExplorePage: NextPage = () => {
 
   const getExplorePosts = async () => {
     const { data } = await axios.get<Post[]>(
-      `${process.env.NEXTAUTH_URL}/api/explore`
+      `${process.env.API_URL}/api/explore`
     );
 
     setPosts(data);
