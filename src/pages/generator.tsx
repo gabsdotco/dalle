@@ -6,7 +6,7 @@ import { GetServerSideProps, NextPage } from "next";
 import { FaTimes } from "react-icons/fa";
 import { Session, unstable_getServerSession } from "next-auth";
 
-import { styled, global } from "@/theme";
+import { styled } from "@/theme";
 import { MainLayout } from "@/layouts";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { CraiyonResponse } from "@/types";
