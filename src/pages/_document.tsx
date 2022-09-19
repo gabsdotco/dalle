@@ -2,7 +2,7 @@ import React from "react";
 
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 
-import { getCssString, globalStyles } from "@/theme";
+import { getCssText, globalStyles } from "@/theme";
 
 export default class Document extends NextDocument {
   render() {
@@ -11,17 +11,16 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet"
           />
-          <style
-            id="stitches"
-            dangerouslySetInnerHTML={{ __html: getCssString() }}
-          />
-          <title>Dallgram</title>
         </Head>
         <body>
           <Main />

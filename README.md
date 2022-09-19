@@ -39,3 +39,4 @@ The project is built using the following technologies:
 - [Stitches](https://stitches.dev/)
 - [Axios](https://axios-http.com/)
 - [Vercel](https://vercel.com/)
+- [NextAuth.js](https://next-auth.js.org/)

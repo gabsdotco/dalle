@@ -1,8 +1,8 @@
-import { createCss } from "@stitches/react";
+import { createStitches } from "@stitches/react";
 
 import { colors, space, fonts, fontSizes } from './foundations';
 
-export const { styled, css, global, getCssString } = createCss({
+export const { styled, css, globalCss, getCssText } = createStitches({
   theme: {
     colors,
     space,
@@ -12,7 +12,7 @@ export const { styled, css, global, getCssString } = createCss({
 });
 
 
-export const globalStyles = global({
+export const globalStyles = globalCss({
   '*': {
     margin: 0,
     padding: 0,
