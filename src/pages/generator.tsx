@@ -70,7 +70,7 @@ const GeneratorPage: NextPage = () => {
     setIsPosting(true);
 
     try {
-      await axios.post("/api/post", {
+      await axios.post(`${process.env.NEXTAUTH_URL}/api/post`, {
         image: craiyonSelectedImage,
         userId: session?.data?.user?.id,
         description: craiyonSelectedImageDescription
