@@ -84,6 +84,7 @@ const ProfilePage: NextPage = () => {
           <StyledGrid>
             {user?.posts?.map((post, idx) => (
               <Flex
+                key={idx}
                 role="group"
                 css={{
                   width: "100%",

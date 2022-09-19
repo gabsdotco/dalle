@@ -95,7 +95,7 @@ const GeneratorPage: NextPage = () => {
           width: "100%",
           height: "100%",
           paddingInline: "$2xl",
-          paddingTop: !!craiyonResponse && "100px",
+          paddingTop: !!craiyonResponse && !isPosting && "100px",
           overflow: "auto",
 
           "&::-webkit-scrollbar": {

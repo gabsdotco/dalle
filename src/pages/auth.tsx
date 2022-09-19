@@ -6,13 +6,11 @@ import { unstable_getServerSession } from "next-auth";
 
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { Button, Flex, Heading, Text } from "@/components";
+import { MainLayout } from "@/layouts";
 
 const AuthPage: NextPage = () => {
   return (
-    <Flex
-      justify="center"
-      css={{ width: "100vw", height: "100vh", padding: "$2xl" }}
-    >
+    <MainLayout>
       <Flex
         align="center"
         justify="center"
@@ -21,7 +19,8 @@ const AuthPage: NextPage = () => {
           gap: "$md",
           width: "fit-content",
           height: "100%",
-          maxWidth: "720px"
+          maxWidth: "720px",
+          paddingInline: "$2xl"
         }}
       >
         <Flex direction="column" css={{ width: "100%", gap: "$sm" }}>
@@ -51,7 +50,7 @@ const AuthPage: NextPage = () => {
           </Button>
         </Flex>
       </Flex>
-    </Flex>
+    </MainLayout>
   );
 };
 
