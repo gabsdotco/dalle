@@ -1,5 +1,5 @@
 {
-  "name": "craiyon-ia-generator",
+  "name": "dallgram",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -7,16 +7,26 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next-auth/prisma-adapter": "^1.0.4",
+    "@prisma/client": "^4.3.1",
     "@stitches/react": "0.1.3",
     "@types/node": "14.0.27",
     "@types/react": "16.9.46",
-    "next": "latest",
+    "axios": "^0.27.2",
+    "imagekit": "^4.1.1",
+    "next": "^12.3.0",
+    "next-auth": "^4.10.3",
     "prettier": "2.7.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "typescript": "3.9.7"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "typescript": "3.9.7",
+    "uuid": "^9.0.0"
   },
   "license": "ISC",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "prisma": "^4.3.1"
+  }
 }
