@@ -2,7 +2,7 @@
   "name": "dallgram",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "prisma generate && next",
     "build": "next build",
     "start": "next start",
     "generate": "prisma generate",
