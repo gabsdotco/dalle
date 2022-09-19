@@ -1,19 +1,17 @@
 import { useState } from "react";
 
-import { useRouter } from "next/router";
 import axios from "axios";
-import { GetServerSideProps, NextPage } from "next";
 import { FaTimes } from "react-icons/fa";
-import { Session, unstable_getServerSession } from "next-auth";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
+import { unstable_getServerSession } from "next-auth";
+import { GetServerSideProps, NextPage } from "next";
 
 import { styled } from "@/theme";
 import { MainLayout } from "@/layouts";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import { CraiyonResponse } from "@/types";
 import { Button, Flex, Input, Text, Textarea } from "@/components";
-import { useSession } from "next-auth/react";
-
-const GENERATE_ENDPOINT = "http://localhost:3000/api/generate";
 
 const StyledGrid = styled("div", {
   gap: "$sm",
@@ -41,7 +39,7 @@ const GeneratorPage: NextPage = () => {
     useState<string>("");
 
   const fetchCraiyonBackend = async (prompt: string) => {
-    const { data } = await axios.post(GENERATE_ENDPOINT, {
+    const { data } = await axios.post(`${process.env.API_URL}/api/generate`, {
       prompt
     });
 
